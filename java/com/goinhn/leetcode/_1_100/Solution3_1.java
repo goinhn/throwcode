@@ -6,7 +6,7 @@ import java.util.Map;
 public class Solution3_1 {
 
     public static void main(String[] args) {
-        String test = "abcabcbb";
+        String test = "abcabcbbfakfksfhjkhf";
         System.out.println(new Solution3_1().lengthOfLongestSubstring(test));
     }
 
@@ -17,9 +17,11 @@ public class Solution3_1 {
 
         int maxLength = 0;
         int nowLength = 0;
+//        下一次子字符串开始的位置
+        int index = 0;
         Map<Character, Integer> map = new HashMap<>();
 
-        for (int i = 0; i < s.length(); i++) {
+        for (int i = 0; i < s.length(); i = index) {
             nowLength = 0;
             map.clear();
             map.put(s.charAt(i), i);
@@ -29,14 +31,17 @@ public class Solution3_1 {
                     if (j - i > nowLength) {
                         nowLength = j - i;
                     }
+                    index = map.get(s.charAt(j)) + 1;
                     break;
                 }
                 map.put(s.charAt(j), j);
                 nowLength++;
             }
-            if(nowLength > maxLength){
+
+            if (nowLength > maxLength) {
                 maxLength = nowLength;
             }
+            index++;
         }
         return maxLength;
     }
