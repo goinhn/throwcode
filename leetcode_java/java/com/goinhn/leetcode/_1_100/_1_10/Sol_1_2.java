@@ -7,8 +7,8 @@ import java.util.Map;
  * <p>
  * 1. 两数之和
  * <p>
- * 时间复杂度O(N)
- * 空间复杂度O(N)
+ * time:O(N)
+ * space:O(N)
  * <p>
  * 利用哈希表的结构来进行快速的查找
  * </p>
@@ -16,7 +16,7 @@ import java.util.Map;
  * @author goinhn
  * @date 2020-08-29T19:20:17
  */
-public class Solution_1_2 {
+public class Sol_1_2 {
 
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
@@ -30,7 +30,7 @@ public class Solution_1_2 {
             }
         }
 
-        throw new IllegalArgumentException("no two sum");
+        throw new IllegalArgumentException("no two sum numbers");
     }
 
     public static void main(String[] args) {
