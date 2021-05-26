@@ -4,8 +4,8 @@ package com.goinhn.leetcode._1_100._1_10;
  * <p>
  * 2. 两数相加
  * <p>
- * 时间复杂度 O(max(M+N))
- * 空间复杂度 O(max(M+N))
+ * time:O(max(M+N))
+ * space:O(max(M+N))
  * <p>
  * 遍历两个链表，每次当作数字相加考虑进位即可，注意最后一个进位容易被遗漏
  * </p>
@@ -13,9 +13,11 @@ package com.goinhn.leetcode._1_100._1_10;
  * @author goinhn
  * @date 2020-08-29T20:16:12
  */
-public class Solution_2_1 {
+public class Sol_2_1 {
 
-    /* Definition for singly-linked list. */
+    /**
+     * Definition for singly-linked list.
+     */
     public static class ListNode {
         public int val;
         public ListNode next;
@@ -29,6 +31,7 @@ public class Solution_2_1 {
         ListNode t1 = l1;
         ListNode t2 = l2;
         ListNode l = new ListNode(0);
+//        保存的返回结果=的头指针
         ListNode lResult = l;
 //        上一位的进位
         int carry = 0;
@@ -65,7 +68,7 @@ public class Solution_2_1 {
         l2.next.next = new ListNode(4);
 
         ListNode list = new ListNode(0);
-        list = new Solution_2_1().addTwoNumbers(l1, l2);
+        list = new Sol_2_1().addTwoNumbers(l1, l2);
         while (list != null) {
             System.out.println(list.val);
             list = list.next;
