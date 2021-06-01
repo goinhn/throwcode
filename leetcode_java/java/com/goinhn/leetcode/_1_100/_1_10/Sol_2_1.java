@@ -11,7 +11,7 @@ package com.goinhn.leetcode._1_100._1_10;
  * </p>
  *
  * @author goinhn
- * @date 2020-08-29T20:16:12
+ * @date 2020-08-29
  */
 public class Sol_2_1 {
 

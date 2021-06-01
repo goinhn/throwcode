@@ -4,14 +4,19 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * <p>
+ * 3. 无重复字符的最长子串
+ * <p>
+ * time:O(n)
+ * space:O(n)
+ * <p>
  * 滑动窗口
+ * </p>
+ *
+ * @author goinhn
+ * @date 2021-06-01
  */
-public class Solution3_3 {
-
-    public static void main(String[] args) {
-        String test = "abcabcbb";
-        System.out.println(new Solution3_3().lengthOfLongestSubstring(test));
-    }
+public class Sol_3_3 {
 
     public int lengthOfLongestSubstring(String s) {
         int strLength = s.length();
@@ -24,7 +29,6 @@ public class Solution3_3 {
                 set.add(s.charAt(end));
                 end++;
                 maxLength = Math.max(maxLength, end - start);
-
             }else {
                 set.remove(s.charAt(start));
                 start++;

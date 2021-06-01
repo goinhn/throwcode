@@ -14,7 +14,7 @@ import java.util.Map;
  * </p>
  *
  * @author goinhn
- * @date 2020-08-29T20:05:54
+ * @date 2020-08-29
  */
 public class Sol_1_3 {
 
