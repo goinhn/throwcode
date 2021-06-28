@@ -52,11 +52,7 @@ public class Sol_4_1 {
 
     public double centerArray(int[] nums) {
         int length = nums.length;
-        if (length % 2 == 0) {
-            return (nums[(length - 1) / 2] + nums[length / 2]) / 2.0;
-        } else {
-            return (double) nums[length / 2];
-        }
+        return length % 2 == 0 ? (nums[(length - 1) / 2] + nums[length / 2]) / 2.0 : (double) nums[length / 2];
     }
 
 }

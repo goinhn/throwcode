@@ -1,14 +1,14 @@
 package com.goinhn.leetcode._1_100._1_10;
 
 // 暴力法进行遍历//超出时间限制
-public class Solution5_1 {
+public class Sol_5_1 {
 
     public static void main(String[] args) {
 
     }
 
     public String longestPalindrome(String s) {
-        if (s.equals("") || s == null) {
+        if(s == null || s.length() == 0) {
             return "";
         }
 
