@@ -11,7 +11,7 @@ public class Sol9 {
     /**
      * 反转重新生成一个整数进行判断
      * <p>
-     * time:O(N)
+     * time:O(n)
      * space:O(1)
      */
     private static class Solution1 {
@@ -38,7 +38,7 @@ public class Sol9 {
     /**
      * 将左半部分和右半部分进行比较是否相等
      * <p>
-     * time:O(N)
+     * time:O(n)
      * space:O(1)
      */
     private static class Solution2 {

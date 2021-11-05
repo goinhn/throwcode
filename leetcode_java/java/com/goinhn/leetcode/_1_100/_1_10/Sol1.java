@@ -14,7 +14,7 @@ public class Sol1 {
     /**
      * 直接使用两遍循环判断是否有和等于目标值的数字
      * <p>
-     * time:O(N^2)
+     * time:O(n^2)
      * space:O(1)
      */
     private static class Solution1 {
@@ -35,8 +35,8 @@ public class Sol1 {
     /**
      * 利用哈希表的结构来进行快速的查找
      * <p>
-     * time:O(N)
-     * space:O(N)
+     * time:O(n)
+     * space:O(n)
      */
     private static class Solution2 {
         public int[] twoSum(int[] nums, int target) {
@@ -58,8 +58,8 @@ public class Sol1 {
     /**
      * 利用哈希表的结构来进行快速的查找
      * <p>
-     * time:O(N)
-     * space:O(N)
+     * time:O(n)
+     * space:O(n)
      */
     private static class Solution3 {
         public int[] twoSum(int[] nums, int target) {

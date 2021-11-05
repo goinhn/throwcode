@@ -13,7 +13,7 @@ public class Sol7 {
      * Integer.MIN_VALUE = -2147483648
      * Integer.MAX_VALUE = 2147483647
      * <p>
-     * time:O(N)
+     * time:O(n)
      * space:O(1)
      */
     private static class Solution1 {
