@@ -11,20 +11,45 @@ package com.goinhn.leetcode._1_100;
  **/
 public class Sol27 {
 
-    public int removeElement(int[] nums, int val) {
-        int end = nums.length;
-
-        for(int i =0;i<end;i++){
-            if(nums[i] == val){
-                int middle = nums[i];
-                nums[i] = nums[end-1];
-                nums[end-1] = middle;
-
-                end--;
-                i--;
+    /**
+     * 双指针替换
+     * 直接将重复的元素替换，无需移动
+     * <p>
+     * time:O(n)
+     * space:O(1)
+     */
+    private static class Solution1 {
+        public int removeElement(int[] nums, int val) {
+            int repeatIndex = nums.length;
+            for (int i = 0; i < repeatIndex; i++) {
+                if (nums[i] == val) {
+                    nums[i] = nums[repeatIndex - 1];
+                    repeatIndex--;
+                    i--;
+                }
             }
-        }
 
-        return end;
+            return repeatIndex;
+        }
     }
+
+    /**
+     * 双指针
+     * <p>
+     * time:O(n)
+     * space:O(1)
+     */
+    private static class Solution2 {
+        public int removeElement(int[] nums, int val) {
+            int left = 0;
+            for (int right = 0; right < nums.length; right++) {
+                if (val != nums[right]) {
+                    nums[left] = nums[right];
+                    left++;
+                }
+            }
+            return left;
+        }
+    }
+
 }
