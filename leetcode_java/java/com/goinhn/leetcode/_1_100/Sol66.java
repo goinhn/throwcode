@@ -1,12 +1,9 @@
-/*
- * Copyright (C) 2021 Baidu, Inc. All Rights Reserved.
- */
 package com.goinhn.leetcode._1_100;
 
 /**
  * 66.加一
  *
- * @author fangwenzhan
+ * @author goinhn
  * @date 2021-11-15
  **/
 public class Sol66 {

@@ -1,12 +1,9 @@
-/*
- * Copyright (C) 2021 Baidu, Inc. All Rights Reserved.
- */
 package com.goinhn.leetcode._1_100;
 
 /**
  * 21.合并两个有序链表
  *
- * @author fangwenzhan
+ * @author goinhn
  * @date 2021-11-05
  **/
 public class Sol21 {

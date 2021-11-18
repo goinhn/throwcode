@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2021 Baidu, Inc. All Rights Reserved.
- */
 package com.goinhn.leetcode._1_100;
 
 /**
@@ -51,9 +48,13 @@ public class Sol28 {
         }
     }
 
+    /**
+     * kmp匹配算法
+     */
     private static class Solution3 {
         public int strStr(String haystack, String needle) {
             return 0;
+
         }
     }
 
