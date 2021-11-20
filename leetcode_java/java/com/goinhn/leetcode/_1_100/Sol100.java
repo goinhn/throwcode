@@ -7,7 +7,8 @@ package com.goinhn.leetcode._1_100;
  * @date 2021/11/20
  */
 public class Sol100 {
-    public class TreeNode {
+
+    private static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
