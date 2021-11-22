@@ -1,12 +1,12 @@
 package com.goinhn.thorwcode.leetcode.question._101_200;
 
 /**
- * 111.二叉树的最小深度
+ * 112.路径总和
  *
  * @author goinhn
- * @date 2021/11/21
+ * @date 2021/11/22
  */
-public class Sol111 {
+public class Sol112 {
 
     private static class TreeNode {
         int val;
@@ -34,21 +34,15 @@ public class Sol111 {
      * space:O(n)
      */
     private static class Solution1 {
-        public int minDepth(TreeNode root) {
+        public boolean hasPathSum(TreeNode root, int targetSum) {
             if (root == null) {
-                return 0;
+                return false;
             }
             if (root.left == null && root.right == null) {
-                return 1;
+                return root.val == targetSum;
             }
-            int ans = Integer.MAX_VALUE;
-            if (root.left != null) {
-                ans = Math.min(minDepth(root.left), ans);
-            }
-            if (root.right != null) {
-                ans = Math.min(minDepth(root.right), ans);
-            }
-            return ans + 1;
+            return hasPathSum(root.left, targetSum - root.val)
+                    || hasPathSum(root.right, targetSum - root.val);
         }
     }
 }

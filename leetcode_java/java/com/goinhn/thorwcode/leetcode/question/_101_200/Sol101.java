@@ -28,7 +28,7 @@ public class Sol101 {
     }
 
     /**
-     * 广度优先搜索，转换为两个相同的树问题
+     * DFS，转换为两个相同的树问题
      * <p>
      * time:O(min(m,n))
      * space:O(min(m,n))

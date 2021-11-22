@@ -28,7 +28,7 @@ public class Sol100 {
     }
 
     /**
-     * 广度优先搜索
+     * DFS
      * <p>
      * time:O(min(m,n))
      * space:O(min(m,n))

@@ -28,7 +28,7 @@ public class Sol104 {
     }
 
     /**
-     * 广度优先搜索
+     * DFS
      * <p>
      * time:O(n)
      * space:O(n)
