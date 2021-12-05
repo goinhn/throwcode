@@ -1,4 +1,4 @@
-package com.goinhn.throwcode.sworddirectoffer;
+package com.goinhn.throwcode.codinginterviews;
 
 
 /**

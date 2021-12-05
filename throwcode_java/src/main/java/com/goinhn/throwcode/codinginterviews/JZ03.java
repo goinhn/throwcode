@@ -1,4 +1,4 @@
-package com.goinhn.throwcode.sworddirectoffer;
+package com.goinhn.throwcode.codinginterviews;
 
 import java.util.ArrayList;
 import java.util.Collections;
