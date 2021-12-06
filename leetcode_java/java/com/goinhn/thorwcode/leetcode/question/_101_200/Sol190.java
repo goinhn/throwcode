@@ -1,6 +1,8 @@
 package com.goinhn.thorwcode.leetcode.question._101_200;
 
 /**
+ * 190.颠倒二进制位
+ *
  * @author goinhn
  * @date 2021/12/5
  */
