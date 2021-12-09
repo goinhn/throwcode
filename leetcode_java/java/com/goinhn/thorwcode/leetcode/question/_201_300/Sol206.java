@@ -1,10 +1,9 @@
-/*
- * Copyright (C) 2021 Baidu, Inc. All Rights Reserved.
- */
 package com.goinhn.thorwcode.leetcode.question._201_300;
 
 /**
- * @author fangwenzhan
+ * 206.反转链表
+ *
+ * @author goinhn
  * @date 2021/12/9
  */
 public class Sol206 {
