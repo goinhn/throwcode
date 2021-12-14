@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2021 Baidu, Inc. All Rights Reserved.
- */
 package com.goinhn.thorwcode.leetcode.question._201_300;
 
 import java.util.ArrayList;
@@ -9,7 +6,7 @@ import java.util.List;
 /**
  * 243.最短单词距离
  *
- * @author fangwenzhan
+ * @author goinhn
  * @date 2021/12/13
  */
 public class Sol243 {
