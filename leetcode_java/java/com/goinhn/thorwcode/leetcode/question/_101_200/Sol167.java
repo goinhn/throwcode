@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2021 Baidu, Inc. All Rights Reserved.
- */
 package com.goinhn.thorwcode.leetcode.question._101_200;
 
 /**
