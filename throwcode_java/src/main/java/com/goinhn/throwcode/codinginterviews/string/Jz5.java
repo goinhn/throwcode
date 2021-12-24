@@ -8,15 +8,18 @@ package com.goinhn.throwcode.codinginterviews.string;
  */
 public class Jz5 {
 
+    /**
+     * 遍历
+     */
     private static class Solution1 {
 
-        private static final String target = "%20";
+        private static final String TARGET = "%20";
 
         public String replaceSpace(String s) {
             StringBuilder result = new StringBuilder();
             for (int i = 0; i < s.length(); i++) {
                 if (s.charAt(i) == ' ') {
-                    result.append(target);
+                    result.append(TARGET);
                 } else {
                     result.append(s.charAt(i));
                 }
@@ -25,12 +28,16 @@ public class Jz5 {
         }
     }
 
+    /**
+     * api调用
+     */
     private static class Solution2 {
 
-        private static final String target = "%20";
+        private static final String TARGET = "%20";
 
         public String replaceSpace(String s) {
-            return s.replaceAll(" ", target);
+            return s.replaceAll(" ", TARGET);
         }
+
     }
 }
