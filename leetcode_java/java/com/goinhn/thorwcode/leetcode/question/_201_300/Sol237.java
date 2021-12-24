@@ -1,12 +1,9 @@
-/*
- * Copyright (C) 2021 Baidu, Inc. All Rights Reserved.
- */
 package com.goinhn.thorwcode.leetcode.question._201_300;
 
 /**
  * 237.删除链表中的节点
  *
- * @author fangwenzhan
+ * @author goinhn
  * @date 2021/12/12
  */
 public class Sol237 {
