@@ -8,6 +8,11 @@ package com.goinhn.throwcode.codinginterviews.search;
  */
 public class Jz53I {
 
+    /**
+     * 二分法
+     * time:O(logn)
+     * space:O(n)
+     */
     private static class Solution1 {
         public int search(int[] nums, int target) {
             if (nums.length == 0) {
