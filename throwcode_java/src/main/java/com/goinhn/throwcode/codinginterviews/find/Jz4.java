@@ -1,4 +1,4 @@
-package com.goinhn.throwcode.codinginterviews.search;
+package com.goinhn.throwcode.codinginterviews.find;
 
 /**
  * 4.二维数组中的查找

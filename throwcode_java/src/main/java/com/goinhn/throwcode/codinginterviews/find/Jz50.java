@@ -1,4 +1,4 @@
-package com.goinhn.throwcode.codinginterviews.search;
+package com.goinhn.throwcode.codinginterviews.find;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;

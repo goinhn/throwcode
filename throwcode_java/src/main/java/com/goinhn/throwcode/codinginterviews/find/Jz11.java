@@ -1,4 +1,4 @@
-package com.goinhn.throwcode.codinginterviews.search;
+package com.goinhn.throwcode.codinginterviews.find;
 
 /**
  * 11.旋转数组的最小数字

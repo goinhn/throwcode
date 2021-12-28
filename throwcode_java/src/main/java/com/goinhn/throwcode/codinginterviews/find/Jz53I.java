@@ -1,4 +1,4 @@
-package com.goinhn.throwcode.codinginterviews.search;
+package com.goinhn.throwcode.codinginterviews.find;
 
 /**
  * 53I.在排序数组中查找数字
