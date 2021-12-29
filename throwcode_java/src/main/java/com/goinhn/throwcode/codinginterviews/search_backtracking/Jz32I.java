@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * 从上往下打印二叉树
+ * 32I.从上往下打印二叉树
  *
  * @author goinhn
  * @date 2020-12-10T00:39:04
@@ -36,8 +36,8 @@ public class Jz32I {
             Queue<TreeNode> nodeList = new LinkedList<>();
             nodeList.add(root);
             List<Integer> valList = new ArrayList<>();
-            while (nodeList.size() != 0) {
-                TreeNode tempNode = nodeList.remove();
+            while (!nodeList.isEmpty()) {
+                TreeNode tempNode = nodeList.poll();
                 valList.add(tempNode.val);
                 if (tempNode.left != null) {
                     nodeList.add(tempNode.left);
