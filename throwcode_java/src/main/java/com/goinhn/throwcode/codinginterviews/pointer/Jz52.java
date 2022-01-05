@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * 52.
+ * 52.两个链表的公共节点
  *
  * @author goinhn
  * @date 2022/1/5
