@@ -1,12 +1,12 @@
 package com.goinhn.throwcode.codinginterviews.liked_list;
 
 /**
- * 10.反转链表
+ * 24.反转链表
  *
  * @author goinhn
  * @date 2020-12-03T22:15:12
  */
-public class Jz10 {
+public class Jz24 {
 
     private static class ListNode {
         int val;
