@@ -3,9 +3,7 @@ package com.goinhn.throwcode.algorithm.sort;
 import java.util.Arrays;
 
 /**
- * <p>
- *
- * </p>
+ * 排序测试
  *
  * @author goinhn
  * @date 2021-03-01T17:10:38
@@ -14,8 +12,6 @@ public class TestSort {
 
     /**
      * 内置api排序
-     *
-     * @param arr
      */
     public static void comparator(int[] arr) {
         Arrays.sort(arr);
@@ -23,10 +19,6 @@ public class TestSort {
 
     /**
      * 生成随机的数组
-     *
-     * @param maxSize
-     * @param maxValue
-     * @return
      */
     public static int[] generateRandomArray(int maxSize, int maxValue) {
         int[] arr = new int[(int) ((maxSize + 1) * Math.random())];
@@ -38,27 +30,18 @@ public class TestSort {
 
     /**
      * 拷贝数组
-     *
-     * @param arr
-     * @return
      */
     public static int[] copyArray(int[] arr) {
         if (arr == null) {
             return null;
         }
         int[] res = new int[arr.length];
-        for (int i = 0; i < arr.length; i++) {
-            res[i] = arr[i];
-        }
+        System.arraycopy(arr, 0, res, 0, arr.length);
         return res;
     }
 
     /**
      * 判断数组是否相等
-     *
-     * @param arr1
-     * @param arr2
-     * @return
      */
     public static boolean isEqual(int[] arr1, int[] arr2) {
         if (arr1 == null || arr2 == null) {
@@ -77,8 +60,6 @@ public class TestSort {
 
     /**
      * 打印数组
-     *
-     * @param arr
      */
     public static void printArray(int[] arr) {
         if (arr == null) {

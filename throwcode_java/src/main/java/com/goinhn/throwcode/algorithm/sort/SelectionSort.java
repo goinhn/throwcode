@@ -1,14 +1,10 @@
 package com.goinhn.throwcode.algorithm.sort;
 
 /**
- * <p>
  * 选择排序
  * 稳定排序
- * </p>
- * <p>
- * 时间复杂度 O(N^2)
- * 空间复杂度 O(1)
- * </p>
+ * time:O(n^2)
+ * space:O(1)
  *
  * @author goinhn
  * @date 2020-08-23T0:25:00
@@ -17,22 +13,16 @@ public class SelectionSort {
 
     public static void main(String[] args) {
         int[] arr = new int[]{1, 2, 4, 1, 3, 5};
-        selectionSort(arr);
+        new SelectionSort().selectionSort(arr);
         for (int i : arr) {
             System.out.println(i);
         }
     }
 
-    /**
-     * 选择算法
-     *
-     * @param arr
-     */
-    public static void selectionSort(int[] arr) {
+    public void selectionSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
         }
-
         for (int i = 0; i < arr.length - 1; i++) {
             int minIndex = i;
             for (int j = i + 1; j < arr.length; j++) {
@@ -44,14 +34,7 @@ public class SelectionSort {
         }
     }
 
-    /**
-     * 交换方法
-     *
-     * @param arr
-     * @param x
-     * @param y
-     */
-    public static void swap(int[] arr, int x, int y) {
+    private void swap(int[] arr, int x, int y) {
         int temp = arr[x];
         arr[x] = arr[y];
         arr[y] = temp;

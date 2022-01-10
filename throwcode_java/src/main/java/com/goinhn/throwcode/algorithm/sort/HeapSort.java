@@ -36,12 +36,18 @@ package com.goinhn.throwcode.algorithm.sort;
  */
 public class HeapSort {
 
+    public static void main(String[] args) {
+        int[] arr = new int[]{1, 2, 3, 4, 7, 1, 2, 0, 5, 10};
+        new HeapSort().heapSort(arr);
+        for (int i : arr) {
+            System.out.println(i);
+        }
+    }
+
     /**
      * 堆排序检查
-     *
-     * @param arr
      */
-    public static void heapSort(int[] arr) {
+    public void heapSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
         }
@@ -60,11 +66,8 @@ public class HeapSort {
 
     /**
      * 构建大根堆过程
-     *
-     * @param arr
-     * @param index
      */
-    public static void heapInsert(int[] arr, int index) {
+    public void heapInsert(int[] arr, int index) {
         while (arr[index] > arr[(index - 1) / 2]) {
             swap(arr, index, (index - 1) / 2);
             index = (index - 1) / 2;
@@ -74,7 +77,6 @@ public class HeapSort {
     /**
      * 堆化的过程
      *
-     * @param arr
      * @param index 进行堆化的数组的左边界，也即堆的头结点
      * @param end   进行堆化的数组的右边界，也即堆的尾部
      */
@@ -97,23 +99,11 @@ public class HeapSort {
 
     /**
      * 交换方法
-     *
-     * @param arr
-     * @param x
-     * @param y
      */
     public static void swap(int[] arr, int x, int y) {
         int temp = arr[x];
         arr[x] = arr[y];
         arr[y] = temp;
-    }
-
-    public static void main(String[] args) {
-        int[] arr = new int[]{1, 2, 3, 4, 7, 1, 2, 0, 5, 10};
-        heapSort(arr);
-        for (int i : arr) {
-            System.out.println(i);
-        }
     }
 
 }

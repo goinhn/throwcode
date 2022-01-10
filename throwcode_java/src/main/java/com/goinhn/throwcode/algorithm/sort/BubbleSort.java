@@ -1,14 +1,10 @@
 package com.goinhn.throwcode.algorithm.sort;
 
 /**
- * <p>
  * 冒泡排序
  * 稳定排序
- * </p>
- * <p>
- * 时间复杂度 O(N^2)
- * 空间复杂度 O(1)
- * </p>
+ * time:O(n^2)
+ * space:O(1)
  *
  * @author goinhn
  * @date 2020-08-23T0:09:00
@@ -17,18 +13,13 @@ public class BubbleSort {
 
     public static void main(String[] args) {
         int[] arr = new int[]{1, 2, 4, 1, 3, 5};
-        bubbleSort(arr);
+        new BubbleSort().bubbleSort(arr);
         for (int i : arr) {
             System.out.println(i);
         }
     }
 
-    /**
-     * 冒泡排序
-     *
-     * @param arr
-     */
-    public static void bubbleSort(int[] arr) {
+    public void bubbleSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
         }
@@ -41,17 +32,21 @@ public class BubbleSort {
         }
     }
 
-    /**
-     * 交换方法
-     *
-     * @param arr
-     * @param x
-     * @param y
-     */
-    public static void swap(int[] arr, int x, int y) {
+    private void swap(int[] arr, int x, int y) {
         int temp = arr[x];
         arr[x] = arr[y];
         arr[y] = temp;
+    }
+
+    /**
+     * x = a ^ b;
+     * y = (a ^ b) ^ b;
+     * x = (a ^ b ^ (a ^ b ^ b)
+     */
+    private void swapBit(int[] arr, int x, int y) {
+        arr[x] = arr[x] ^ arr[y];
+        arr[y] = arr[x] ^ arr[y];
+        arr[x] = arr[x] ^ arr[y];
     }
 
 }
