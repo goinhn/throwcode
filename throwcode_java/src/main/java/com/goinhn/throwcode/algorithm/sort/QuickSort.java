@@ -1,13 +1,9 @@
 package com.goinhn.throwcode.algorithm.sort;
 
 /**
- * <p>
  * 快速排序
- * </p>
- * <p>
- * 时间复杂度 O(N*logN)
- * 空间复杂度 O(logN)
- * </P>
+ * time:O(nlogn)
+ * 空间复杂度 O(logn)
  *
  * @author goinhn
  * @date 2020-08-23T23:30:04
@@ -22,10 +18,8 @@ public class QuickSort {
 
         /**
          * 初始条件判断
-         *
-         * @param arr
          */
-        public static void quickSort(int[] arr) {
+        public void quickSort(int[] arr) {
             if (arr == null || arr.length < 2) {
                 return;
             }
@@ -36,12 +30,8 @@ public class QuickSort {
         /**
          * 快速排序
          * 递归进行
-         *
-         * @param arr
-         * @param l
-         * @param r
          */
-        public static void quickSort(int[] arr, int l, int r) {
+        private void quickSort(int[] arr, int l, int r) {
             if (l >= r) {
                 return;
             }
@@ -53,23 +43,17 @@ public class QuickSort {
 
         /**
          * 根据标志数据的大小将小的数放置到左边，大的数放置到右边
-         *
-         * @param arr
-         * @param l
-         * @param r
          */
-        public static int searchSwap(int[] arr, int l, int r) {
+        private int searchSwap(int[] arr, int l, int r) {
             // 设置标志的位置，统一将标志位设置为数组的最后一个数
             int flag = r;
             while (l < r) {
                 if (arr[l] < arr[flag]) {
                     l++;
+                } else if (arr[r] >= arr[flag]) {
+                    r--;
                 } else {
-                    if (arr[r] >= arr[flag]) {
-                        r--;
-                    } else {
-                        swap(arr, l++, r);
-                    }
+                    swap(arr, l++, r);
                 }
             }
 
@@ -79,20 +63,16 @@ public class QuickSort {
 
         /**
          * 交换方法
-         *
-         * @param arr
-         * @param x
-         * @param y
          */
-        public static void swap(int[] arr, int x, int y) {
+        private void swap(int[] arr, int x, int y) {
             int temp = arr[x];
             arr[x] = arr[y];
             arr[y] = temp;
         }
 
         public static void main(String[] args) {
-            int[] arr = new int[]{1, 1, 1, 1, 2, 1, 2};
-            quickSort(arr);
+            int[] arr = new int[]{1, 1, 1, 0, 2, 1, 2};
+            new ClassicQuickSort().quickSort(arr);
             for (int i : arr) {
                 System.out.println(i);
             }
@@ -108,10 +88,8 @@ public class QuickSort {
 
         /**
          * 初始条件判断
-         *
-         * @param arr
          */
-        public static void quickSort(int[] arr) {
+        public void quickSort(int[] arr) {
             if (arr == null || arr.length < 2) {
                 return;
             }
@@ -122,12 +100,8 @@ public class QuickSort {
         /**
          * 快速排序
          * 递归进行
-         *
-         * @param arr
-         * @param l
-         * @param r
          */
-        public static void quickSort(int[] arr, int l, int r) {
+        private void quickSort(int[] arr, int l, int r) {
             if (l >= r) {
                 return;
             }
@@ -140,10 +114,6 @@ public class QuickSort {
 
         /**
          * 根据标志数据的大小将小的数放置到左边，大的数放置到右边
-         *
-         * @param arr
-         * @param l
-         * @param r
          */
 //        public static int[] searchSwap(int[] arr, int l, int r) {
 //            // 设置标志的位置，统一将标志位设置为数组的最后一个数
@@ -164,7 +134,7 @@ public class QuickSort {
 //
 //            return new int[]{less + 1, more - 1};
 //        }
-        public static int[] searchSwap(int[] arr, int l, int r) {
+        private int[] searchSwap(int[] arr, int l, int r) {
             int less = l - 1;
             int more = r;
             while (l < more) {
@@ -182,12 +152,8 @@ public class QuickSort {
 
         /**
          * 交换方法
-         *
-         * @param arr
-         * @param x
-         * @param y
          */
-        public static void swap(int[] arr, int x, int y) {
+        private void swap(int[] arr, int x, int y) {
             int temp = arr[x];
             arr[x] = arr[y];
             arr[y] = temp;
@@ -195,7 +161,7 @@ public class QuickSort {
 
         public static void main(String[] args) {
             int[] arr = new int[]{1, 2, 3, 1, 5, 6, 3, 2, 1, 0};
-            quickSort(arr);
+            new NewQuickSort().quickSort(arr);
             for (int i : arr) {
                 System.out.println(i);
             }
@@ -210,10 +176,8 @@ public class QuickSort {
 
         /**
          * 初始条件判断
-         *
-         * @param arr
          */
-        public static void quickSort(int[] arr) {
+        public void quickSort(int[] arr) {
             if (arr == null || arr.length < 2) {
                 return;
             }
@@ -224,12 +188,8 @@ public class QuickSort {
         /**
          * 快速排序
          * 递归进行
-         *
-         * @param arr
-         * @param l
-         * @param r
          */
-        public static void quickSort(int[] arr, int l, int r) {
+        private void quickSort(int[] arr, int l, int r) {
             if (l >= r) {
                 return;
             }
@@ -243,10 +203,6 @@ public class QuickSort {
 
         /**
          * 根据标志数据的大小将小的数放置到左边，大的数放置到右边
-         *
-         * @param arr
-         * @param l
-         * @param r
          */
 //        public static int[] searchSwap(int[] arr, int l, int r) {
 //            // 设置标志的位置，统一将标志位设置为数组的最后一个数
@@ -267,7 +223,7 @@ public class QuickSort {
 //
 //            return new int[]{less + 1, more - 1};
 //        }
-        public static int[] searchSwap(int[] arr, int l, int r) {
+        private int[] searchSwap(int[] arr, int l, int r) {
             int less = l - 1;
             int more = r;
             while (l < more) {
@@ -285,12 +241,8 @@ public class QuickSort {
 
         /**
          * 交换方法
-         *
-         * @param arr
-         * @param x
-         * @param y
          */
-        public static void swap(int[] arr, int x, int y) {
+        private void swap(int[] arr, int x, int y) {
             int temp = arr[x];
             arr[x] = arr[y];
             arr[y] = temp;
@@ -298,7 +250,7 @@ public class QuickSort {
 
         public static void main(String[] args) {
             int[] arr = new int[]{1, 2, 3, 1, 5, 6, 3, 2, 1, 0};
-            quickSort(arr);
+            new RandomQuickSort().quickSort(arr);
             for (int i : arr) {
                 System.out.println(i);
             }

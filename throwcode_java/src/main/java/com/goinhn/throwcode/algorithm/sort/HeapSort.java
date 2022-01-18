@@ -5,8 +5,8 @@ package com.goinhn.throwcode.algorithm.sort;
  * 堆排序
  * </p>
  * <p>
- * 时间复杂度：O(N*logN)
- * 空间复杂度：O(1)
+ * time:O(nlogn)
+ * space:O(n)
  * </p>
  * <p>
  * 完全二叉树
@@ -47,7 +47,7 @@ public class HeapSort {
     /**
      * 堆排序检查
      */
-    public void heapSort(int[] arr) {
+    private void heapSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
         }
@@ -67,7 +67,7 @@ public class HeapSort {
     /**
      * 构建大根堆过程
      */
-    public void heapInsert(int[] arr, int index) {
+    private void heapInsert(int[] arr, int index) {
         while (arr[index] > arr[(index - 1) / 2]) {
             swap(arr, index, (index - 1) / 2);
             index = (index - 1) / 2;
@@ -80,7 +80,7 @@ public class HeapSort {
      * @param index 进行堆化的数组的左边界，也即堆的头结点
      * @param end   进行堆化的数组的右边界，也即堆的尾部
      */
-    public static void heapify(int[] arr, int index, int end) {
+    private static void heapify(int[] arr, int index, int end) {
         int left = index * 2 + 1;
         while (left < end) {
             int largest = left + 1 < end && arr[left] < arr[left + 1] ? left + 1 : left;
@@ -100,7 +100,7 @@ public class HeapSort {
     /**
      * 交换方法
      */
-    public static void swap(int[] arr, int x, int y) {
+    private static void swap(int[] arr, int x, int y) {
         int temp = arr[x];
         arr[x] = arr[y];
         arr[y] = temp;

@@ -77,7 +77,7 @@ public class TestSort {
             int[] arr1 = generateRandomArray(maxSize, maxValue);
             int[] arr2 = copyArray(arr1);
             printArray(arr1);
-            QuickSort.ClassicQuickSort.quickSort(arr1);
+            new QuickSort.ClassicQuickSort().quickSort(arr1);
             comparator(arr2);
             if (!isEqual(arr1, arr2)) {
                 succeed = false;

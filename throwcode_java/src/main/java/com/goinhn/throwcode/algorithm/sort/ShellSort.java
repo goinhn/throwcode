@@ -1,12 +1,9 @@
 package com.goinhn.throwcode.algorithm.sort;
 
 /**
- * <p>
  * 希尔排序
- * <p>
- * 时间复杂度 O(N*logN)
- * 空间复杂度 O(1)
- * </p>
+ * time:O(nlogn)
+ * space:O(1)
  *
  * @author goinhn
  * @date 2020-11-22T20:27:02
@@ -15,13 +12,13 @@ public class ShellSort {
 
     public static void main(String[] args) {
         int[] arr = new int[]{1, 2, 4, 1, 3, 5};
-        shellSort(arr);
+        new ShellSort().shellSort(arr);
         for (int i : arr) {
             System.out.println(i);
         }
     }
 
-    public static void shellSort(int[] arr) {
+    private void shellSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
         }
@@ -41,7 +38,7 @@ public class ShellSort {
         }
     }
 
-    public static void swap(int[] arr, int x, int y) {
+    private void swap(int[] arr, int x, int y) {
         int temp = arr[x];
         arr[x] = arr[y];
         arr[y] = temp;

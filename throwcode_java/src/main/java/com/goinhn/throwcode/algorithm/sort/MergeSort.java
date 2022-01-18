@@ -6,8 +6,8 @@ package com.goinhn.throwcode.algorithm.sort;
  * 递归思想
  * </p>
  * <p>
- * 时间复杂度 O(N*logN)
- * 空间复杂度 O(N)
+ * time:O(nlogn)
+ * space:O(n)
  * </p>
  * <p>
  * 注意数组转换的时候下标的位置
@@ -20,18 +20,13 @@ public class MergeSort {
 
     public static void main(String[] args) {
         int[] arr = new int[]{1, 2, 3, 1, 6, 3};
-        mergeSort(arr);
+        new MergeSort().mergeSort(arr);
         for (int i : arr) {
             System.out.println(i);
         }
     }
 
-    /**
-     * 合并排序
-     *
-     * @param arr
-     */
-    public static void mergeSort(int[] arr) {
+    public void mergeSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
         }
@@ -41,12 +36,8 @@ public class MergeSort {
 
     /**
      * 递归方法
-     *
-     * @param arr
-     * @param l
-     * @param r
      */
-    public static void mergeSort(int[] arr, int l, int r) {
+    private void mergeSort(int[] arr, int l, int r) {
         if (l == r) {
             return;
         }
@@ -60,12 +51,8 @@ public class MergeSort {
 
     /**
      * 合并数组方法
-     *
-     * @param l
-     * @param r
-     * @return
      */
-    public static void merge(int[] arr, int l, int m, int r) {
+    private void merge(int[] arr, int l, int m, int r) {
         int[] arrTemp = new int[r - l + 1];
         // 临时存储数组指针
         int index = 0;
