@@ -9,7 +9,7 @@ import java.util.Stack;
  * @author goinhn
  * @date 2020-12-09T20:23:08
  */
-public class Jz20 {
+public class Jz30 {
 
     private static class Solution1 {
 

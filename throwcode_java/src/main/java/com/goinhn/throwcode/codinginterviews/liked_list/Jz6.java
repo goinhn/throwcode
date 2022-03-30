@@ -48,7 +48,7 @@ public class Jz6 {
      * space:O(n)
      */
     private static class Solution2 {
-        private List<Integer> list = new ArrayList<>();
+        private final List<Integer> list = new ArrayList<>();
 
         public int[] reversePrint(ListNode head) {
             reverseHelper(head);
