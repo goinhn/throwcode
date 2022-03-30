@@ -11,7 +11,7 @@ public class Jz53I {
     /**
      * 二分法
      * time:O(logn)
-     * space:O(n)
+     * space:O(1)
      */
     private static class Solution1 {
         public int search(int[] nums, int target) {
@@ -21,7 +21,6 @@ public class Jz53I {
 
             int left = 0;
             int right = nums.length - 1;
-
             while (left < right) {
                 int middle = (left + right) >> 1;
                 if (nums[middle] >= target) {
@@ -49,12 +48,8 @@ public class Jz53I {
                 return 0;
             }
             int higher = right;
-            return higher - lower + 1;
-        }
 
-        public static void main(String[] args) {
-            int[] nums = new int[]{5, 7, 7, 8, 8, 10};
-            System.out.println(new Solution1().search(nums, 8));
+            return higher - lower + 1;
         }
     }
 }
