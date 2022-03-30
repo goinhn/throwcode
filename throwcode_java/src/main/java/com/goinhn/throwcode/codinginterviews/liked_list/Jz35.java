@@ -30,19 +30,19 @@ public class Jz35 {
      */
     private static class Solution1 {
 
-        private static Map<Node, Node> nodeMap = new HashMap<>();
+        private static final Map<Node, Node> NODE_MAP = new HashMap<>();
 
         public Node copyRandomList(Node head) {
             if (head == null) {
                 return null;
             }
-            if (!nodeMap.containsKey(head)) {
+            if (!NODE_MAP.containsKey(head)) {
                 Node newNode = new Node(head.val);
-                nodeMap.put(head, newNode);
+                NODE_MAP.put(head, newNode);
                 newNode.next = copyRandomList(head.next);
                 newNode.random = copyRandomList(head.random);
             }
-            return nodeMap.get(head);
+            return NODE_MAP.get(head);
         }
     }
 
@@ -52,7 +52,7 @@ public class Jz35 {
      * space:O(n)
      */
     private static class Solution2 {
-        private static Map<Node, Node> nodeMap = new HashMap<>();
+        private static final Map<Node, Node> NODE_MAP = new HashMap<>();
 
         public Node copyRandomList(Node head) {
             if (head == null) {
@@ -63,19 +63,19 @@ public class Jz35 {
             Node newNodePre = new Node(-1);
             while (nodeIndex != null) {
                 newNodePre.next = new Node(nodeIndex.val);
-                nodeMap.put(nodeIndex, newNodePre.next);
+                NODE_MAP.put(nodeIndex, newNodePre.next);
                 nodeIndex = nodeIndex.next;
                 newNodePre = newNodePre.next;
             }
             // 拼接剩下的random指向
             nodeIndex = head;
-            Node newNodeIndex = nodeMap.get(nodeIndex);
+            Node newNodeIndex = NODE_MAP.get(nodeIndex);
             while (nodeIndex != null) {
-                newNodeIndex.random = nodeMap.get(nodeIndex.random);
+                newNodeIndex.random = NODE_MAP.get(nodeIndex.random);
                 nodeIndex = nodeIndex.next;
                 newNodeIndex = newNodeIndex.next;
             }
-            return nodeMap.get(head);
+            return NODE_MAP.get(head);
         }
     }
 
