@@ -29,6 +29,8 @@ public class Jz10I {
      * space:O(1)
      */
     private static class Solution2 {
+        private static final Integer MOD_NUM = (int) (1e9 + 7);
+
         public int fib(int n) {
             if (n <= 1) {
                 return n;
@@ -38,7 +40,7 @@ public class Jz10I {
             int second = 1;
             int third = 0;
             for (int i = 2; i < n + 1; i++) {
-                third = (first + second) % (int) 1e9 + 7;
+                third = (first + second) % MOD_NUM;
                 first = second;
                 second = third;
             }
