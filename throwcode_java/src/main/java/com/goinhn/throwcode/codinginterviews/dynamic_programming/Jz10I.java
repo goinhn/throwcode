@@ -29,7 +29,7 @@ public class Jz10I {
      * space:O(1)
      */
     private static class Solution2 {
-        private static final Integer MOD_NUM = (int) (1e9 + 7);
+        private static final int MOD_NUM = (int) 1e9 + 7;
 
         public int fib(int n) {
             if (n <= 1) {
