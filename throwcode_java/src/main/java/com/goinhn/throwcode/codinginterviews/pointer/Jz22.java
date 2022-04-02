@@ -30,8 +30,8 @@ public class Jz22 {
             }
             ListNode slowNode = head;
             ListNode fastNode = head;
-            for (int i = 0; i < k - 1; i++) {
-                if (fastNode.next != null) {
+            for (int i = 0; i < k; i++) {
+                if (fastNode != null) {
                     fastNode = fastNode.next;
                 } else {
                     return null;
