@@ -28,7 +28,7 @@ public class Jz26 {
      */
     private static class Solution1 {
         public boolean isSubStructure(TreeNode A, TreeNode B) {
-            return (A == null || B == null)
+            return A != null && B != null
                     && (isSubTree(A, B) || isSubStructure(A.left, B) || isSubStructure(A.right, B));
         }
 
