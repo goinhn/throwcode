@@ -1,4 +1,4 @@
-package com.goinhn.throwcode.codinginterviews.search_backtracking;
+package com.goinhn.throwcode.codinginterviews.math;
 
 import java.util.HashMap;
 import java.util.Map;
