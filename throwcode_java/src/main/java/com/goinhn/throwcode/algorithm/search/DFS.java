@@ -15,7 +15,7 @@ public class DFS {
     /**
      * 二叉树
      */
-    public class BinaryTree {
+    private static class BinaryTree {
         public int val;
         public BinaryTree left;
         public BinaryTree right;
@@ -27,14 +27,14 @@ public class DFS {
 
     /**
      * 使用递归的方式来进行二叉树DFS
-     *
-     * @param root
      */
-    public void withRecursionToBinaryTreeDFS(BinaryTree root) {
+    private void withRecursionToBinaryTreeDFS(BinaryTree root) {
         if (root == null) {
             return;
         }
+
         System.out.println(root.val);
+
         if (root.left != null) {
             withRecursionToBinaryTreeDFS(root.left);
         }
@@ -46,12 +46,10 @@ public class DFS {
 
     /**
      * 使用栈的方式实现二叉树的DFS
-     *
-     * @param root
      */
-    public void withStackToBinaryTreeDFS(BinaryTree root) {
+    private List<BinaryTree> withStackToBinaryTreeDFS(BinaryTree root) {
         if (root == null) {
-            return;
+            return new ArrayList<>();
         }
 
         Stack<BinaryTree> stack = new Stack<>();
@@ -68,13 +66,15 @@ public class DFS {
                 stack.push(root.left);
             }
         }
+
+        return list;
     }
 
 
     /**
      * N叉树
      */
-    public class Tree {
+    private static class Tree {
         public int val;
         public List<Tree> children;
 
@@ -85,13 +85,12 @@ public class DFS {
 
     /**
      * 使用递归的方式来实现N叉树的DFS
-     *
-     * @param root
      */
-    public void withRecursionToTreeDFS(Tree root) {
+    private void withRecursionToTreeDFS(Tree root) {
         if (root == null) {
             return;
         }
+
         System.out.println(root.val);
 
         if (root.children != null) {
@@ -105,12 +104,10 @@ public class DFS {
 
     /**
      * 使用栈的方式来实现N叉树的DFS
-     *
-     * @param root
      */
-    public void withStackToTreeDFS(Tree root) {
+    private List<Tree> withStackToTreeDFS(Tree root) {
         if (root == null) {
-            return;
+            return new ArrayList<>();
         }
 
         Stack<Tree> stack = new Stack<>();
@@ -127,13 +124,15 @@ public class DFS {
                 }
             }
         }
+
+        return list;
     }
 
 
     /**
      * 图
      */
-    public class Graph {
+    private static class Graph {
         public int val;
         public List<Graph> children;
 
@@ -149,10 +148,8 @@ public class DFS {
 
     /**
      * 使用递归的方式来实现图的DFS
-     *
-     * @param root
      */
-    public void withRecursionToGraphDFS(Graph root) {
+    private void withRecursionToGraphDFS(Graph root) {
         if (root == null) {
             return;
         }
@@ -173,10 +170,8 @@ public class DFS {
 
     /**
      * 使用栈的方式来实现图的DFS
-     *
-     * @param root
      */
-    public void withStackToGraphDFS(Graph root) {
+    private void withStackToGraphDFS(Graph root) {
         if (root == null) {
             return;
         }
