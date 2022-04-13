@@ -80,7 +80,7 @@ public class HeapSort {
      * @param index 进行堆化的数组的左边界，也即堆的头结点
      * @param end   进行堆化的数组的右边界，也即堆的尾部
      */
-    private static void heapify(int[] arr, int index, int end) {
+    private void heapify(int[] arr, int index, int end) {
         int left = index * 2 + 1;
         while (left < end) {
             int largest = left + 1 < end && arr[left] < arr[left + 1] ? left + 1 : left;
@@ -100,7 +100,7 @@ public class HeapSort {
     /**
      * 交换方法
      */
-    private static void swap(int[] arr, int x, int y) {
+    private void swap(int[] arr, int x, int y) {
         int temp = arr[x];
         arr[x] = arr[y];
         arr[y] = temp;
