@@ -1,6 +1,8 @@
 package com.goinhn.throwcode.codinginterviews.search_backtracking;
 
 /**
+ * 55I.二叉树的深度
+ *
  * @author goinhn
  * @date 2022/4/19
  */
@@ -19,7 +21,7 @@ public class Jz55I {
     /**
      * 递归，dfs
      * time:O(n)
-     * space:O(1)
+     * space:O(n)
      */
     private static class Solution1 {
         private int maxDepth = 0;
@@ -43,7 +45,7 @@ public class Jz55I {
     /**
      * 递归，dfs
      * time:O(n)
-     * space:O(1)
+     * space:O(n)
      */
     private static class Solution2 {
         public int maxDepth(TreeNode root) {
