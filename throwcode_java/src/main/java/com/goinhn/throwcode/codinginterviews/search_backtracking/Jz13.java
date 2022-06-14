@@ -36,13 +36,13 @@ public class Jz13 {
         private void innerHelper(int x, int y, int m, int n, int k) {
             if (x >= m || y >= n || matrix[x][y] == 1 || getEveryNumSum(x) + getEveryNumSum(y) > k) {
                 return;
-            } else {
-                count++;
-                matrix[x][y] = 1;
-                System.out.println(x + "," + y);
-                innerHelper(x + 1, y, m, n, k);
-                innerHelper(x, y + 1, m, n, k);
             }
+
+            count++;
+            matrix[x][y] = 1;
+            System.out.println(x + "," + y);
+            innerHelper(x + 1, y, m, n, k);
+            innerHelper(x, y + 1, m, n, k);
         }
 
         /**
@@ -111,6 +111,7 @@ public class Jz13 {
                         || getEveryNumSum(locationNow.getX()) + getEveryNumSum(locationNow.getY()) > k) {
                     continue;
                 }
+
                 count++;
                 matrix[locationNow.getX()][locationNow.getY()] = true;
                 nodeQueue.offer(new Location(locationNow.getX() + 1, locationNow.y));
