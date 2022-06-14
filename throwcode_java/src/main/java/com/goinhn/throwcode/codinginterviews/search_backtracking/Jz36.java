@@ -28,9 +28,9 @@ public class Jz36 {
     }
 
     /**
-     * 深度优先遍历
+     * 中序遍历
      * <p>
-     * time:O(n^2)
+     * time:O(n)
      * space:O(n)
      */
     private static class Solution1 {
