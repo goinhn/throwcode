@@ -1,64 +1,87 @@
 package com.goinhn.throwcode.algorithm.datastructure.tree.traversetree;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Stack;
 
 /**
- * <p>
- *
- * </p>
+ * 二叉树的中序遍历
  *
  * @author goinhn
  * @date 2020-09-17T14:54:56
  */
 public class InOrder {
 
+    private static List<BinaryTreeNode> resList;
+
     /**
      * 中序遍历递归版本
-     *
-     * @param binaryTree
-     * @param list
-     * @return
      */
-    public static List<BinaryTree> inOrderPrint(BinaryTree binaryTree, List<BinaryTree> list) {
-        if (binaryTree != null) {
-            list = inOrderPrint(binaryTree.left, list);
-            list.add(binaryTree);
-            list = inOrderPrint(binaryTree.right, list);
+    public static List<BinaryTreeNode> inOrderRecursion(BinaryTreeNode node) {
+        resList = new ArrayList<>();
+
+        dfs(node);
+
+        return resList;
+    }
+
+    private static void dfs(BinaryTreeNode node) {
+        if (node == null) {
+            return;
         }
 
-        return list;
+        dfs(node.left);
+        resList.add(node);
+        dfs(node.right);
     }
 
 
     /**
      * 中序遍历非递归版本
-     *
-     * @param binaryTree
-     * @return
      */
-    public static List<BinaryTree> inOrderPrint(BinaryTree binaryTree) {
-        List<BinaryTree> list = new ArrayList<>();
-
-        Stack<BinaryTree> treeNodeStack = new Stack<BinaryTree>();
-        BinaryTree node = binaryTree;
-
-        while (node != null || !treeNodeStack.isEmpty()) {
+    public static List<BinaryTreeNode> inOrder(BinaryTreeNode node) {
+        List<BinaryTreeNode> resList = new ArrayList<>();
+        Stack<BinaryTreeNode> nodeStack = new Stack<>();
+        while (node != null || !nodeStack.isEmpty()) {
             while (node != null) {
-                treeNodeStack.push(node);
+                nodeStack.push(node);
                 node = node.left;
             }
 
-            if (!treeNodeStack.isEmpty()) {
-                node = treeNodeStack.pop();
-                list.add(node);
+            if (!nodeStack.isEmpty()) {
+                node = nodeStack.pop();
+                resList.add(node);
                 node = node.right;
             }
         }
 
-        return list;
+        return resList;
     }
 
+
+    /**
+     * 中序遍历非递归版本
+     */
+    public static List<BinaryTreeNode> inOrderV2(BinaryTreeNode node) {
+        if (node == null) {
+            return Collections.emptyList();
+        }
+
+        List<BinaryTreeNode> resList = new ArrayList<>();
+        Stack<BinaryTreeNode> nodeStack = new Stack<>();
+        while (!nodeStack.isEmpty() || node != null) {
+            if (node != null) {
+                nodeStack.push(node);
+                node = node.left;
+            } else {
+                node = nodeStack.pop();
+                resList.add(node);
+                node = node.right;
+            }
+        }
+
+        return resList;
+    }
 
 }
