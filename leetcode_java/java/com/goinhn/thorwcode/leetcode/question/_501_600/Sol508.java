@@ -33,13 +33,20 @@ public class Sol508 {
     }
 
     /**
+     * dfs + 哈希映射
      * time:O(n)
      * space:O(n)
      */
     private static class Solution1 {
 
+        /**
+         * 存储每个子树和的出现次数
+         */
         private static Map<Integer, Integer> countMap;
 
+        /**
+         * 存储最子树和的最大次数
+         */
         private static int maxNum;
 
         public int[] findFrequentTreeSum(TreeNode root) {
