@@ -13,6 +13,7 @@ public class Sol121 {
      * space:(1)
      */
     private static class Solution1 {
+
         public int maxProfit(int[] prices) {
             int minPrice = Integer.MAX_VALUE;
             int maxGap = 0;
@@ -23,7 +24,10 @@ public class Sol121 {
                     maxGap = Math.max(maxGap, price - minPrice);
                 }
             }
+
             return maxGap;
         }
+
     }
+
 }
