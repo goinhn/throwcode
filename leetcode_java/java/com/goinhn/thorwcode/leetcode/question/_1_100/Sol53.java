@@ -36,15 +36,11 @@ public class Sol53 {
      */
     private static class Solution2 {
         public int maxSubArray(int[] nums) {
-            int sum = 0;
+            int pre = 0;
             int max = nums[0];
             for (int num : nums) {
-                if (sum > 0) {
-                    sum += num;
-                } else {
-                    sum = num;
-                }
-                max = Math.max(sum, max);
+                pre = Math.max(pre + num, num);
+                max = Math.max(pre, max);
             }
             return max;
         }
