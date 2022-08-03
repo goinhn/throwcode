@@ -12,11 +12,11 @@ public class LRU {
     /**
      * 外部数据加载器
      */
-    public interface Loader<K, V> {
+    private interface Loader<K, V> {
         V load(K key);
     }
 
-    public static class Cache<K, V> {
+    private static class Cache<K, V> {
 
         /**
          * 存储最大数量
@@ -82,7 +82,7 @@ public class LRU {
             this.len = 0;
             this.head = null;
             this.tail = null;
-            this.storeMap = new HashMap<>();
+            this.storeMap = new HashMap<>(capacity);
         }
 
         /**
@@ -156,7 +156,7 @@ public class LRU {
 
     }
 
-    public static class CacheV2<K, V> {
+    private static class CacheV2<K, V> {
 
         /**
          * 存储最大数量
@@ -216,7 +216,7 @@ public class LRU {
             this.len = 0;
             this.head = null;
             this.tail = null;
-            this.storeMap = new HashMap<>();
+            this.storeMap = new HashMap<>(capacity);
         }
 
         /**
