@@ -11,14 +11,29 @@ public class FIFO {
 
     public static class Cache<K, V> {
 
+        /**
+         * 存储最大容量
+         */
         private final int capacity;
 
+        /**
+         * 链表头指针
+         */
         private Node<V> head;
 
+        /**
+         * 链表尾指针
+         */
         private Node<V> tail;
 
+        /**
+         * 当前存储节点数量
+         */
         private int len;
 
+        /**
+         * 对应节点的映射
+         */
         private final Map<K, Node<V>> storeMap;
 
         /**
