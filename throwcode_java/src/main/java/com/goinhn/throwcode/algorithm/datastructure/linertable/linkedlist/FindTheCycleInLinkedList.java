@@ -4,21 +4,15 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * <p>
+ * 给定一个链表，判断链表中是否有环
  * leetcode 141
- *
- * 给定一个链表，判断链表中是否有环。
- * <p>
- * 时间复杂度:O(N)
- * 空间复杂度:O(1)
- * </p>
  *
  * @author goinhn
  * @date 2020-09-12T11:07:51
  */
-public class LinkedListCycle {
+public class FindTheCycleInLinkedList {
 
-    public static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 
@@ -29,9 +23,8 @@ public class LinkedListCycle {
 
     /**
      * 快慢指针，有环则必相遇
-     *
-     * @param head
-     * @return
+     * time:O(n)
+     * space:O(1)
      */
     public boolean hasCycle(ListNode head) {
         ListNode fast = head;
@@ -50,9 +43,8 @@ public class LinkedListCycle {
 
     /**
      * 使用哈希表，出现重复的节点则存在环
-     *
-     * @param head
-     * @return
+     * time:O(n)
+     * space:O(n)
      */
     public boolean hasCycleHashTable(ListNode head) {
         Set<ListNode> set = new HashSet<>();
