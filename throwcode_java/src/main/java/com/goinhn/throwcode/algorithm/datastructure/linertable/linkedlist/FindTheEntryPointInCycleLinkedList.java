@@ -4,19 +4,13 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * <p>
- * leetcode 142
- *
  * 给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null
- * <p>
- * 时间复杂度:O(N)
- * 空间复杂度:O(1)
- * </p>
+ * leetcode 142
  *
  * @author goinhn
  * @date 2020-09-12T11:22:18
  */
-public class LinkedListCycleII {
+public class FindTheEntryPointInCycleLinkedList {
 
     static class ListNode {
         int val;
@@ -29,9 +23,8 @@ public class LinkedListCycleII {
 
     /**
      * 快慢指针，最后头节点和相遇节点到入环节点位置的距离是一样的
-     *
-     * @param head
-     * @return
+     * time:O(n)
+     * space:O(1)
      */
     public ListNode detectCycle(ListNode head) {
         ListNode fast = head;
@@ -55,9 +48,8 @@ public class LinkedListCycleII {
 
     /**
      * 使用哈希表的形式来存储不重复的节点，出现重复则为入环节点
-     *
-     * @param head
-     * @return
+     * time:O(n)
+     * space:O(n)
      */
     public ListNode detectCycleHashTable(ListNode head) {
         Set<ListNode> set = new HashSet<>();
