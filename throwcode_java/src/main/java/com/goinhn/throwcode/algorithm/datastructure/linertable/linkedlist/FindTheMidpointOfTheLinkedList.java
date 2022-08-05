@@ -3,6 +3,7 @@ package com.goinhn.throwcode.algorithm.datastructure.linertable.linkedlist;
 /**
  * 找到链表的中间节点
  * 如果存在重复的则取第二个节点
+ * leetcode 876
  *
  * @author goinhn
  * @date 2022/8/5
