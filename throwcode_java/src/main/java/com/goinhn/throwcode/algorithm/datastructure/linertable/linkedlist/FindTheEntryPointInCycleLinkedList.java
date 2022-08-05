@@ -12,7 +12,7 @@ import java.util.Set;
  */
 public class FindTheEntryPointInCycleLinkedList {
 
-    static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 
