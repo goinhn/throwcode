@@ -27,6 +27,7 @@ public class Sol235 {
      * space:O(n)
      */
     private static class Solution1 {
+
         public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
             List<TreeNode> pList = findThePathToNode(root, p);
             List<TreeNode> qList = findThePathToNode(root, q);
@@ -60,6 +61,7 @@ public class Sol235 {
 
             return result;
         }
+
     }
 
     /**
@@ -68,6 +70,7 @@ public class Sol235 {
      * space:O(1)
      */
     private static class Solution2 {
+
         public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
             if (root.val > p.val && root.val > q.val) {
                 return lowestCommonAncestor(root.left, p, q);
@@ -77,5 +80,30 @@ public class Sol235 {
                 return root;
             }
         }
+
     }
+
+    /**
+     * 按照二叉搜索树的特性来进行一次遍历
+     * time:O(n)
+     * space:O(1)
+     */
+    private static class Solution3 {
+
+        public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+            while (root != null) {
+                if (root.val > p.val && root.val < q.val) {
+                    root = root.left;
+                } else if (root.val < p.val && root.val < q.val) {
+                    root = root.right;
+                } else {
+                    break;
+                }
+            }
+
+            return root;
+        }
+
+    }
+
 }
