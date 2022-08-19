@@ -49,11 +49,9 @@ public class InOrder {
                 node = node.left;
             }
 
-            if (!nodeStack.isEmpty()) {
-                node = nodeStack.pop();
-                resList.add(node);
-                node = node.right;
-            }
+            node = nodeStack.pop();
+            resList.add(node);
+            node = node.right;
         }
 
         return resList;
