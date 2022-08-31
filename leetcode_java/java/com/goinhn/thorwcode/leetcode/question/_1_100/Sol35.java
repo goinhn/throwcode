@@ -9,8 +9,7 @@ package com.goinhn.thorwcode.leetcode.question._1_100;
 public class Sol35 {
 
     /**
-     * 先写出二分查找，再进行改造
-     * <p>
+     * 先写出二分查找，再进行改造，注意边界条件
      * time:O(logn)
      * space:O(1)
      */
@@ -22,11 +21,11 @@ public class Sol35 {
             while (left <= right) {
                 int mid = (left + right) / 2;
                 if (target < nums[mid]) {
-                    right = mid;
+                    right = mid - 1;
                     result = mid;
                 } else if (target > nums[mid]) {
                     left = mid + 1;
-                    result = mid + 1;
+                    result = left;
                 } else {
                     return mid;
                 }
@@ -37,7 +36,8 @@ public class Sol35 {
     }
 
     /**
-     *
+     * time:O(logn)
+     * space:O(1)
      */
     private static class Solution2 {
         public int searchInsert(int[] nums, int target) {
@@ -47,11 +47,10 @@ public class Sol35 {
             while (left <= right) {
                 int mid = (left + right) / 2;
                 if (target <= nums[mid]) {
-                    right = mid;
+                    right = mid - 1;
                     result = mid;
                 } else {
                     left = mid + 1;
-                    result = left;
                 }
             }
 
