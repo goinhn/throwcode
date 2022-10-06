@@ -1,7 +1,3 @@
-/*
- * Copyright NetEase, Inc. ALl rights reserved.
- */
-
 package com.goinhn.thorwcode.leetcode.question._901_1000;
 
 import java.util.HashMap;
