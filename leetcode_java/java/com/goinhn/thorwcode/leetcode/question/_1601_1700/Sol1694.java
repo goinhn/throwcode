@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 1694.重新格式化电话号码
  *
- * @author fangwenzhan
+ * @author goinhn
  * @date 2022/10/1
  */
 public class Sol1694 {

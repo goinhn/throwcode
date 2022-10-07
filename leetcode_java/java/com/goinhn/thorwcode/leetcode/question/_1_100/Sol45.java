@@ -3,7 +3,7 @@ package com.goinhn.thorwcode.leetcode.question._1_100;
 /**
  * 45.跳跃游戏II
  *
- * @author fangwenzhan
+ * @author goinhn
  * @date 2022/10/6
  */
 public class Sol45 {

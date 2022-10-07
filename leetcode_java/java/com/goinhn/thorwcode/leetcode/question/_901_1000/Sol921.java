@@ -7,7 +7,7 @@ import java.util.Stack;
 /**
  * 921.使括号有效的最少添加
  *
- * @author fangwenzhan
+ * @author goinhn
  * @date 2022/10/4
  */
 public class Sol921 {

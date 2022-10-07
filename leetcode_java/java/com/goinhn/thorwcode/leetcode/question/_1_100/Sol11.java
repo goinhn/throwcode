@@ -3,7 +3,7 @@ package com.goinhn.thorwcode.leetcode.question._1_100;
 /**
  * 11.盛最多水的容器
  *
- * @author fangwenzhan
+ * @author goinhn
  * @date 2022/10/4
  */
 public class Sol11 {
