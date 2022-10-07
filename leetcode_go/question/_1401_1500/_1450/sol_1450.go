@@ -1,6 +1,6 @@
 // Package _1450 在既定时间做作业的学生人数
 // @author goinhn
-// @data 2022/8/19
+// @date 2022/8/19
 package _1450
 
 // 遍历

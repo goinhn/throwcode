@@ -1,6 +1,6 @@
 // Package _496 下一个更大元素I
 // @author goinhn
-// @data 2022/8/22
+// @date 2022/8/22
 package _496
 
 // 遍历

@@ -1,6 +1,6 @@
 // Package _1 两数之和
 // @author goinhn
-// @data 2022/8/15
+// @date 2022/8/15
 package _1
 
 // 暴力法

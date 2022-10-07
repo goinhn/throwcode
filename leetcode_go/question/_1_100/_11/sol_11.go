@@ -1,5 +1,8 @@
 package _11
 
+// 贪心
+// time:O(n)
+// space:O(1)
 func maxArea(height []int) int {
 	left := 0
 	right := len(height) - 1

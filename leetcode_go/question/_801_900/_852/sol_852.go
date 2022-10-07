@@ -1,6 +1,6 @@
 // Package _852 山脉数组的峰顶索引
 // @author goinhn
-// @data 2022/8/31
+// @date 2022/8/31
 package _852
 
 // 遍历

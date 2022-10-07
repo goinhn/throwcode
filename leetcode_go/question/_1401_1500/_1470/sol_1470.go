@@ -1,6 +1,6 @@
 // Package _1470 重新排列数组
 // @author goinhn
-// @data 2022/8/29
+// @date 2022/8/29
 package _1470
 
 // time:O(n)

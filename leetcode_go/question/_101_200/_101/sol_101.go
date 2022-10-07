@@ -1,6 +1,6 @@
 // Package _101 对称二叉树
 // @author goinhn
-// @data 2022/8/20
+// @date 2022/8/20
 package _101
 
 type TreeNode struct {

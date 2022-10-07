@@ -1,5 +1,8 @@
 package _921
 
+// 贪心匹配
+// time:O(n)
+// space:O(1)
 func minAddToMakeValid(s string) int {
 	ans := 0
 	leftCount := 0

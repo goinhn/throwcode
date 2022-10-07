@@ -2,6 +2,9 @@ package _1694
 
 import "strings"
 
+// 模拟
+// time:O(n)
+// space:O(n)
 func reformatNumber(number string) string {
 	s := strings.ReplaceAll(number, " ", "")
 	s = strings.ReplaceAll(s, "-", "")

@@ -1,6 +1,6 @@
 // Package _94 二叉树的中序遍历
 // @author goinhn
-// @data 2022/8/19
+// @date 2022/8/19
 package _94
 
 type TreeNode struct {

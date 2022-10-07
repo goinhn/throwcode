@@ -1,6 +1,6 @@
 // Package _35 搜索插入位置
 // @author goinhn
-// @data 2022/8/31
+// @date 2022/8/31
 package _35
 
 // 根据二分进行改造

@@ -1,6 +1,6 @@
 // Package _21 合并两个有序链表
 // @author goinhn
-// @data 2022/8/16
+// @date 2022/8/16
 package _21
 
 type ListNode struct {

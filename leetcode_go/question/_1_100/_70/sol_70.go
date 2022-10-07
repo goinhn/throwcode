@@ -1,6 +1,6 @@
 // Package _70 爬楼梯
 // @author goinhn
-// @data 2022/8/19
+// @date 2022/8/19
 package _70
 
 // 动态规划

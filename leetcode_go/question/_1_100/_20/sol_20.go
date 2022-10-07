@@ -1,6 +1,6 @@
 // Package _20 有效的括号
 // @author goinhn
-// @data 2022/8/16
+// @date 2022/8/16
 package _20
 
 func isValid1(s string) bool {

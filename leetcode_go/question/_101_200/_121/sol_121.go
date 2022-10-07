@@ -1,6 +1,6 @@
 // Package _121 买卖股票的最佳时间
 // @author goinhn
-// @data 2022/8/20
+// @date 2022/8/20
 package _121
 
 // 遍历
