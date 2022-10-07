@@ -1,3 +1,6 @@
+// Package _1694 重新格式化电话号码
+// @author goinhn
+// @data 2022/10/07
 package _1694
 
 import "strings"

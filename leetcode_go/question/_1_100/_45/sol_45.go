@@ -1,3 +1,6 @@
+// Package _45 跳跃游戏II
+// @author goinhn
+// @data 2022/10/07
 package _45
 
 // 贪心
