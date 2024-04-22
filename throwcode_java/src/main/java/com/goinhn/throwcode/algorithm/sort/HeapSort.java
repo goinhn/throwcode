@@ -56,11 +56,11 @@ public class HeapSort {
             heapInsert(arr, i);
         }
 
-        int end = arr.length;
-        swap(arr, 0, --end);
+        int end = arr.length - 1;
         while (end > 0) {
+            swap(arr, 0, end);
             heapify(arr, 0, end);
-            swap(arr, 0, --end);
+            end--;
         }
     }
 

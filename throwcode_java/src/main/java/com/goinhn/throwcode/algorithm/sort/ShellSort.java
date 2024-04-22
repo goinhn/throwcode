@@ -22,10 +22,10 @@ public class ShellSort {
         if (arr == null || arr.length < 2) {
             return;
         }
-//       确定划分的gap大小
+        // 确定划分的gap大小
         int gap = arr.length / 2;
         while (gap > 0) {
-//            分成gap个数量的组，每组进行插入排序
+            // 分成gap个数量的组，每组进行插入排序
             for (int i = 0; i < gap; i++) {
                 for (int j = gap; j < arr.length; j++) {
                     for (int m = j; m > 0 && arr[m] < arr[m - gap]; m -= gap) {
@@ -33,7 +33,7 @@ public class ShellSort {
                     }
                 }
             }
-//            减小gap间隙进行重复分组插入排序
+            // 减小gap间隙进行重复分组插入排序
             gap /= 2;
         }
     }

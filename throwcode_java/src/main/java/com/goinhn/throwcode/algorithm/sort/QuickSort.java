@@ -53,7 +53,8 @@ public class QuickSort {
                 } else if (arr[r] >= arr[flag]) {
                     r--;
                 } else {
-                    swap(arr, l++, r);
+                    swap(arr, l, r);
+                    l++;
                 }
             }
 
