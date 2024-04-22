@@ -52,7 +52,7 @@ public class DFS {
             return new ArrayList<>();
         }
 
-        Stack<BinaryTree> stack = new Stack<>();
+        Deque<BinaryTree> stack = new LinkedList<>();
         List<BinaryTree> list = new LinkedList<>();
         stack.push(root);
         while (!stack.isEmpty()) {
@@ -69,7 +69,6 @@ public class DFS {
 
         return list;
     }
-
 
     /**
      * N叉树
@@ -110,7 +109,7 @@ public class DFS {
             return new ArrayList<>();
         }
 
-        Stack<Tree> stack = new Stack<>();
+        Deque<Tree> stack = new LinkedList<>();
         stack.push(root);
         List<Tree> list = new LinkedList<>();
         while (!stack.isEmpty()) {
@@ -176,7 +175,7 @@ public class DFS {
             return;
         }
 
-        Stack<Graph> stack = new Stack<>();
+        Deque<Graph> stack = new LinkedList<>();
         stack.push(root);
         while (!stack.isEmpty()) {
             root = stack.pop();
