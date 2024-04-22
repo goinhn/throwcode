@@ -12,11 +12,11 @@ import java.util.Set;
  */
 public class FindTheCycleInLinkedList {
 
-    private static class ListNode {
+    public static class Node {
         int val;
-        ListNode next;
+        Node next;
 
-        ListNode(int x) {
+        Node(int x) {
             val = x;
         }
     }
@@ -26,9 +26,9 @@ public class FindTheCycleInLinkedList {
      * time:O(n)
      * space:O(1)
      */
-    public boolean hasCycle(ListNode head) {
-        ListNode fast = head;
-        ListNode slow = head;
+    public boolean hasCycle(Node head) {
+        Node fast = head;
+        Node slow = head;
 
         while (fast != null && fast.next != null) {
             fast = fast.next.next;
@@ -46,8 +46,8 @@ public class FindTheCycleInLinkedList {
      * time:O(n)
      * space:O(n)
      */
-    public boolean hasCycleHashTable(ListNode head) {
-        Set<ListNode> set = new HashSet<>();
+    public boolean hasCycleHashTable(Node head) {
+        Set<Node> set = new HashSet<>();
         while (head != null) {
             if (set.contains(head)) {
                 return true;

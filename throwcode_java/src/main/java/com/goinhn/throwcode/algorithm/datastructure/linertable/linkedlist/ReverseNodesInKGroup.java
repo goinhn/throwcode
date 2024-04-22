@@ -23,27 +23,23 @@ package com.goinhn.throwcode.algorithm.datastructure.linertable.linkedlist;
  */
 public class ReverseNodesInKGroup {
 
-    public static class ListNode {
+    public static class Node {
         int val;
-        ListNode next;
+        Node next;
 
-        ListNode(int x) {
+        Node(int x) {
             val = x;
         }
     }
 
     /**
      * 将中间需要翻转的链表段看成是一个节点，注意头尾节点进行交换
-     *
-     * @param head
-     * @param k
-     * @return
      */
-    public static ListNode reverseKGroup(ListNode head, int k) {
-        ListNode dummy = new ListNode(-1);
+    public static Node reverseKGroup(Node head, int k) {
+        Node dummy = new Node(-1);
         dummy.next = head;
-        ListNode prev = dummy;
-        ListNode tail = head;
+        Node prev = dummy;
+        Node tail = head;
 
         while (head != null) {
             // 寻找是否有足够的节点进行翻转
@@ -59,7 +55,7 @@ public class ReverseNodesInKGroup {
             }
 
             // 暂时保存下一个新链表段开始的节点
-            ListNode tempNext = tail.next;
+            Node tempNext = tail.next;
             reverse(head, tail);
             prev.next = tail;
             prev = head;
@@ -72,19 +68,15 @@ public class ReverseNodesInKGroup {
 
     /**
      * 当前所处的链表段进行反转，反转后头尾节点的位置不变，指向改变，返回下一段链表的开始节点
-     *
-     * @param head
-     * @param tail
-     * @return
      */
-    public static void reverse(ListNode head, ListNode tail) {
-        ListNode prev = null;
-        ListNode cur = head;
+    public static void reverse(Node head, Node tail) {
+        Node prev = null;
+        Node cur = head;
         // 边界值需要单独保存一下
-        ListNode border = tail.next;
+        Node border = tail.next;
 
         while (cur != border) {
-            ListNode tempNode = cur.next;
+            Node tempNode = cur.next;
             cur.next = prev;
             prev = cur;
             cur = tempNode;
@@ -92,11 +84,11 @@ public class ReverseNodesInKGroup {
     }
 
     public static void main(String[] args) {
-        ListNode node = new ListNode(1);
-        node.next = new ListNode(2);
-        node.next.next = new ListNode(3);
-        node.next.next.next = new ListNode(4);
-        node.next.next.next.next = new ListNode(5);
+        Node node = new Node(1);
+        node.next = new Node(2);
+        node.next.next = new Node(3);
+        node.next.next.next = new Node(4);
+        node.next.next.next.next = new Node(5);
 
         node = reverseKGroup(node, 2);
 

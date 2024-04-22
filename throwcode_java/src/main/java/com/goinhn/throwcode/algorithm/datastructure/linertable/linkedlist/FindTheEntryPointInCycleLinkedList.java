@@ -12,11 +12,11 @@ import java.util.Set;
  */
 public class FindTheEntryPointInCycleLinkedList {
 
-    private static class ListNode {
+    public static class Node {
         int val;
-        ListNode next;
+        Node next;
 
-        ListNode(int x) {
+        Node(int x) {
             val = x;
         }
     }
@@ -26,9 +26,9 @@ public class FindTheEntryPointInCycleLinkedList {
      * time:O(n)
      * space:O(1)
      */
-    public ListNode detectCycle(ListNode head) {
-        ListNode fast = head;
-        ListNode slow = head;
+    public Node detectCycle(Node head) {
+        Node fast = head;
+        Node slow = head;
 
         while (fast != null && fast.next != null) {
             fast = fast.next.next;
@@ -51,8 +51,8 @@ public class FindTheEntryPointInCycleLinkedList {
      * time:O(n)
      * space:O(n)
      */
-    public ListNode detectCycleHashTable(ListNode head) {
-        Set<ListNode> set = new HashSet<>();
+    public Node detectCycleHashTable(Node head) {
+        Set<Node> set = new HashSet<>();
         while (head != null) {
             if (set.contains(head)) {
                 return head;

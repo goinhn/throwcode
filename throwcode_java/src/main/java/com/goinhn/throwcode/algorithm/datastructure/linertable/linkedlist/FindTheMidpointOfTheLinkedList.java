@@ -10,18 +10,18 @@ package com.goinhn.throwcode.algorithm.datastructure.linertable.linkedlist;
  */
 public class FindTheMidpointOfTheLinkedList {
 
-    private static class ListNode {
+    public static class Node {
         int val;
-        ListNode next;
+        Node next;
 
-        ListNode() {
+        Node() {
         }
 
-        ListNode(int val) {
+        Node(int val) {
             this.val = val;
         }
 
-        ListNode(int val, ListNode next) {
+        Node(int val, Node next) {
             this.val = val;
             this.next = next;
         }
@@ -31,13 +31,13 @@ public class FindTheMidpointOfTheLinkedList {
      * time:O(n)
      * space:O(1)
      */
-    public ListNode middleNode(ListNode head) {
+    public Node findMiddleNode(Node head) {
         if (head == null) {
-            return head;
+            return null;
         }
 
-        ListNode fast = new ListNode(-1, head);
-        ListNode slow = new ListNode(-1, head);
+        Node fast = new Node(-1, head);
+        Node slow = new Node(-1, head);
         while (fast.next != null && fast.next.next != null) {
             fast = fast.next.next;
             slow = slow.next;
