@@ -13,7 +13,6 @@ public class Sol1 {
 
     /**
      * 直接使用两遍循环判断是否有和等于目标值的数字
-     * <p>
      * time:O(n^2)
      * space:O(1)
      */
@@ -34,7 +33,6 @@ public class Sol1 {
 
     /**
      * 利用哈希表的结构来进行快速的查找
-     * <p>
      * time:O(n)
      * space:O(n)
      */
@@ -57,7 +55,6 @@ public class Sol1 {
 
     /**
      * 利用哈希表的结构来进行快速的查找
-     * <p>
      * time:O(n)
      * space:O(n)
      */

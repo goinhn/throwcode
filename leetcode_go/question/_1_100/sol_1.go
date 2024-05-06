@@ -1,7 +1,8 @@
-// Package _1 两数之和
+// Package _1_100
+// 两数之和
 // @author goinhn
 // @date 2022/8/15
-package _1
+package _1_100
 
 // 暴力法
 // time:O(n^2)
@@ -31,10 +32,9 @@ func twoSum2(nums []int, target int) []int {
 		return []int{}
 	}
 
-	hashTable := map[int]int{}
+	hashTable := make(map[int]int, len(nums))
 	for i, v := range nums {
-		j, ok := hashTable[target-v]
-		if ok {
+		if j, ok := hashTable[target-v]; ok {
 			return []int{i, j}
 		}
 		hashTable[v] = i

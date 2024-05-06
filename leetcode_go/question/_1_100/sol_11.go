@@ -1,7 +1,8 @@
-// Package _11 盛最多水的容器
+// Package _1_100
+// 盛最多水的容器
 // @author goinhn
 // @data 2022/10/07
-package _11
+package _1_100
 
 // 贪心
 // time:O(n)
