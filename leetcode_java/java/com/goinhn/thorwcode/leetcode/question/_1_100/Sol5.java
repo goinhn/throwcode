@@ -16,7 +16,7 @@ public class Sol5 {
     private static class Solution1 {
 
         public String longestPalindrome(String s) {
-            if (s == null || s.length() == 0) {
+            if (s == null || s.isEmpty()) {
                 return "";
             }
 
@@ -52,7 +52,7 @@ public class Sol5 {
 
     private static class Solution2 {
         public String longestPalindrome(String s) {
-            if (s == null || s.length() == 0) {
+            if (s == null || s.isEmpty()) {
                 return "";
             }
 
@@ -91,7 +91,7 @@ public class Sol5 {
 
     private static class Solution3 {
         public String longestPalindrome(String s) {
-            if (s == null || s.length() < 1) return "";
+            if (s == null || s.isEmpty()) return "";
             int start = 0, end = 0;
             for (int i = 0; i < s.length(); i++) {
                 int len1 = expandAroundCenter(s, i, i);

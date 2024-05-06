@@ -15,8 +15,8 @@ public class Sol1668 {
             int count = 0;
             int max = 0;
             int i = 0;
-            for (int i = 0; i < len - l + 1; i++) {
-
+            for (int j = 0; j < len - l + 1; j++) {
+                System.out.println(i);
             }
             while (i < len - l + 1) {
                 if (sequence.substring(i, i + l).equals(word)) {

@@ -1,2 +1,7 @@
-# trd
-Java leetcode solve
+# 分类
+
+## 贪心
+
+## 动态规划
+- 300
+- 
