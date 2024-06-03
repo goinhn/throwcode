@@ -9,7 +9,6 @@ public class Solution12_1 {
         Scanner scanner = new Scanner(System.in);
         int num = scanner.nextInt();
         System.out.println(new Solution12_1().getLuo(num));
-
     }
 
     private String getLuo(int num) {
